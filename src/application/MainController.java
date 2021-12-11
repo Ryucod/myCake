@@ -200,7 +200,7 @@ public class MainController implements Initializable {
 		
 		orderList1.setCellValueFactory(new PropertyValueFactory<>("orderList"));
 		price1.setCellValueFactory(new PropertyValueFactory<>("price"));
-		
+		//변경
 		o1List = FXCollections.observableArrayList();
 	    try{      
 	        String SQL = "Select * from order1 where orderList='시트(초코)'";            
