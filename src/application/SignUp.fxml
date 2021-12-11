@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signUpPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpController">
+   <children>
+      <Label alignment="CENTER" layoutX="179.0" layoutY="31.0" prefHeight="34.0" prefWidth="61.0" text="이름">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textName" layoutX="287.0" layoutY="31.0" prefHeight="34.0" prefWidth="162.0" promptText="name" />
+      <Label alignment="CENTER" layoutX="170.0" layoutY="75.0" prefHeight="34.0" prefWidth="80.0" text="아이디">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="161.0" layoutY="117.0" prefHeight="34.0" prefWidth="97.0" text="비밀번호">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="161.0" layoutY="202.0" prefHeight="34.0" prefWidth="97.0" text="전화번호">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="176.0" layoutY="165.0" prefHeight="34.0" prefWidth="68.0" text="성별">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textId" layoutX="287.0" layoutY="75.0" prefHeight="34.0" prefWidth="162.0" promptText="id" />
+      <PasswordField fx:id="textPass" layoutX="287.0" layoutY="117.0" prefHeight="34.0" prefWidth="162.0" promptText="영문과 숫자로 6자 이상" />
+      <RadioButton fx:id="manRadio" layoutX="287.0" layoutY="165.0" mnemonicParsing="false" onAction="#strSelectGender" prefHeight="34.0" prefWidth="61.0" selected="true" text="남성">
+         <toggleGroup>
+            <ToggleGroup fx:id="groupGender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="womanRadio" layoutX="358.0" layoutY="165.0" mnemonicParsing="false" onAction="#strSelectGender" prefHeight="34.0" prefWidth="61.0" text="여성" toggleGroup="$groupGender">
+      </RadioButton>
+      <ComboBox fx:id="comboTel" layoutX="268.0" layoutY="205.0" prefHeight="27.0" prefWidth="80.0">
+      	<items>
+      		<FXCollections fx:factory="observableArrayList">
+      			<String fx:value="010" />
+      			<String fx:value="011" />
+      			<String fx:value="016" />
+      			<String fx:value="019" />
+      		</FXCollections>
+      	</items>
+      </ComboBox>
+      <Label alignment="CENTER" layoutX="348.0" layoutY="201.0" prefHeight="34.0" prefWidth="41.0" text="-">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textTel1" layoutX="383.0" layoutY="205.0" prefHeight="27.0" prefWidth="68.0" />
+      <Label alignment="CENTER" layoutX="449.0" layoutY="201.0" prefHeight="34.0" prefWidth="41.0" text="-">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textTel2" layoutX="491.0" layoutY="205.0" prefHeight="27.0" prefWidth="68.0" />
+      <Button fx:id="signupBt" layoutX="188.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleSignupBt" prefHeight="27.0" prefWidth="80.0" text="회원가입">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelBt" layoutX="348.0" layoutY="341.0" mnemonicParsing="false" onAction="#handlecancelBt" prefHeight="27.0" prefWidth="80.0" text="취소">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="162.0" layoutY="247.0" prefHeight="34.0" prefWidth="97.0" text="주소">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textAdd" layoutX="270.0" layoutY="251.0" prefHeight="27.0" prefWidth="290.0" promptText="address" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="28.0" prefHeight="40.0" prefWidth="181.0" text="MyCake" textAlignment="CENTER" textFill="#d22aef" textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Corbel Italic" size="31.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="315.0" prefHeight="7.0" prefWidth="580.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="739.0" prefWidth="963.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="application.MainController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="489.0" prefWidth="717.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" prefHeight="40.0" prefWidth="963.0" text="MyCake" textAlignment="CENTER" textFill="#d22aef" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Corbel Italic" size="31.0" />
+               </font>
+            </Label>
+            <TabPane layoutX="14.0" layoutY="40.0" prefHeight="690.0" prefWidth="939.0" rotateGraphic="true" tabClosingPolicy="ALL_TABS">
+              <tabs>
+                <Tab text="주문">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="634.0" prefWidth="913.0">
+                                 <children>
+                                    <GridPane layoutX="21.0" layoutY="40.0" prefHeight="547.0" prefWidth="435.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="180.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="180.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="180.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button fx:id="sizeBt1" alignment="CENTER" depthTest="ENABLE" mnemonicParsing="false" onAction="#size1" prefHeight="100.0" prefWidth="158.0" text="1호&#10;15,000원" textAlignment="CENTER" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="50.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="sizeBr2" mnemonicParsing="false" onAction="#size2" prefHeight="100.0" prefWidth="158.0" text="2호&#10;20,000원" textAlignment="CENTER" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="sizeBt3" mnemonicParsing="false" onAction="#size3" prefHeight="100.0" prefWidth="158.0" text="3호&#10;40,000원" textAlignment="CENTER" GridPane.columnIndex="3">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="flavorBt1" mnemonicParsing="false" onAction="#flavor1" prefHeight="100.0" prefWidth="158.0" text="바닐라(기본)&#10;+0원" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="flavorBt2" mnemonicParsing="false" onAction="#flavor2" prefHeight="100.0" prefWidth="158.0" text="초코&#10;+3,000원" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="flavorBt3" mnemonicParsing="false" onAction="#flavor3" prefHeight="100.0" prefWidth="158.0" text="얼그레이&#10;+3,000원" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="shapeBt1" mnemonicParsing="false" onAction="#shape1" prefHeight="100.0" prefWidth="158.0" text="원형(기본)&#10;+0원" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="shapeBt2" mnemonicParsing="false" onAction="#shape2" prefHeight="100.0" prefWidth="158.0" text="하트&#10;+2,000원" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="shapeBt3" mnemonicParsing="false" onAction="#shape3" prefHeight="100.0" prefWidth="158.0" text="네모&#10;+2,000원" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="creamBt1" mnemonicParsing="false" onAction="#cream1" prefHeight="100.0" prefWidth="158.0" text="생크림(기본)&#10;+0원" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="creamBt2" mnemonicParsing="false" onAction="#cream2" prefHeight="100.0" prefWidth="158.0" text="오레오생크림&#10;+4,000원" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Button fx:id="creamBt3" mnemonicParsing="false" onAction="#cream3" prefHeight="100.0" prefWidth="158.0" text="크림치즈생크림&#10;+4,000원" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="Consolas" size="14.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="80.0" text="크기" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="Consolas Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="80.0" text="시트" textAlignment="CENTER" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Consolas Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="80.0" text="모양" textAlignment="CENTER" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Consolas Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="80.0" text="크림" textAlignment="CENTER" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="Consolas Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                    <Button fx:id="orderBt" layoutX="504.0" layoutY="432.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="165.0" text="Order">
+                                       <font>
+                                          <Font name="Consolas" size="27.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="606.0" layoutY="49.0" text="주문상세정보" wrapText="true">
+                                       <font>
+                                          <Font name="Consolas Bold" size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <ColorAdjust />
+                                       </effect>
+                                    </Label>
+                                    <Button fx:id="resetBt" layoutX="687.0" layoutY="432.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="165.0" text="Reset">
+                                       <font>
+                                          <Font name="Consolas" size="27.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="659.0" layoutY="350.0" text="Total">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="orderTotal" alignment="CENTER_RIGHT" layoutX="732.0" layoutY="352.0" promptText="0" />
+                                    <TableView fx:id="order1" layoutX="478.0" layoutY="77.0" prefHeight="259.0" prefWidth="405.0">
+                                      <columns>
+                                        <TableColumn fx:id="orderList1" prefWidth="249.66668701171875" text="주문내역" />
+                                        <TableColumn fx:id="price1" prefWidth="154.33331298828125" text="금액" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="디자인">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="design" layoutY="-3.0" prefHeight="665.0" prefWidth="939.0">
+                                 <font>
+                                    <Font size="46.0" />
+                                 </font>
+                              </Label>
+                              <Canvas fx:id="canvas" height="605.0" layoutX="14.0" layoutY="49.0" width="910.0" />
+                              <ColorPicker layoutX="350.0" layoutY="15.0" onAction="#color" />
+                              <Slider fx:id="slider" layoutX="486.0" layoutY="9.0" showTickLabels="true" showTickMarks="true" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="샘플">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="79.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake1.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="79.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake6.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="670.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake3.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="370.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake5.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="670.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake7.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="370.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake2.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="79.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake4.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="370.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake8.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="670.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/cake9.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
