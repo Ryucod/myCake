@@ -208,6 +208,8 @@ public class MainController implements Initializable {
 	        while(rs.next()){
 	            Order2 cm = new Order2(SQL, SQL);
 	            cm.orderList2.set(rs.getString("orderList"));
+	            //클래스간 연동
+	            
 	            cm.price2.set(rs.getString("price"));
 	            o2List.addAll(cm);                  
 	        }
